@@ -1,0 +1,189 @@
+body {
+background-color:#E0F2E9; /*#E0F7FA; /*light gray */
+color: black;
+ font-family: "Original Surfer", sans-serif;
+ font-weight: normal;
+}
+
+.font-bold{
+    font-weight: bold;
+}
+
+.header-container a{
+   color: black;
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+
+.space-above {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.space-left_side{
+     margin-left:20px;
+     padding-left:20px;
+}
+
+.right{
+text-align: right;
+margin-right :30px;
+padding-right: 30px;
+padding-top:-10px;
+font-size: 25px;
+}
+
+.header-container {
+   background-color: #AAF0D1;/*#BDFCC9;/*#98FF98;/*#E0F7FA;/*#3EB489; /*platinum */
+    display: flex; /* Flexbox to align items side by side */
+    justify-content: space-between; /* Optional: adds space between them */
+    align-items: center; /* Align items vertically centered */
+     padding: 10px;
+     padding-top:30px;
+     font-family: "Cinzel Decorative", serif;
+     font-weight: bold;
+
+}
+
+.fancy-button {
+    background-color:#AAF0D1; /* Green background */
+    color: black; /* White text */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Padding for size */
+    font-size: 16px; /* Font size */
+    font-family: 'Cinzel Decorative', sans-serif; /* Font family */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    margin-right :10px;
+    padding-top: -10px;
+}
+
+button:hover {
+    background-color: #8CE0A4; /* Color when hovered */
+}
+
+
+.fancy-button:active,
+.fancy-button:focus {
+    background-color: #8CE0A4; /* Keep the same color on click/focus */
+    outline: none; /* Remove outline */
+}
+.body-container{
+  display: flex;
+  flex-direction: column;
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    text-align : center;
+    height:100vh;
+    padding-right :50px;
+    padding-left:50px;
+
+  }
+
+.body-container h3{
+   margin:0;
+   padding :50px;
+
+}
+
+.button-container button {
+    #padding: 10px 20px; /* Adjust padding for buttons */
+    width: 48%; /* Adjust button width for proper spacing */
+}
+
+.card-container {
+    display: flex;
+    justify-content: center; /* Space between cards */
+    align-items: center;
+    margin-top: 70px;
+    #height:100vh;
+  }
+
+  .cards-register{
+width: 350px; /* Width of the card */
+height: 500px;
+padding: 20px;                 /* Inner padding */
+background-color: white;        /* Card background color */
+border-radius: 10px;            /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+border: 2px solid #ddd;        /* Light border */
+display: flex;
+flex-direction: column;
+justify-content: center; /* Space between cards */
+    align-items: center;
+}
+
+.cards-login{
+width: 300px; /* Width of the card */
+height: 400px;
+padding: 40px;                 /* Inner padding */
+background-color: white;        /* Card background color */
+border-radius: 10px;            /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+border: 2px solid #ddd;        /* Light border */
+display: flex;
+flex-direction: column;
+justify-content: center; /* Space between cards */
+align-items: center;
+margin-top:50px;
+}
+ .center{
+text-align:center;
+padding-top:20px;
+}
+
+.flex-container {
+    display: flex; /* Use flexbox layout */
+    align-items: center; /* Vertically center items */
+    padding: 20px; /* Optional: add padding */
+    border: 2px solid #ddd;
+}
+
+.card1{
+ margin:50px;
+ width:40%;
+ padding-right:200px;
+ padding-top:50px;
+ padding-left:50px;
+
+ height:500px;
+ border: 2px solid #ddd;
+}
+
+.card2{
+  margin :50px;
+  width :60%;
+  height:auto;
+  border: 2px solid #ddd;
+  #text-align:center;
+  padding-top:50px;
+  display: flex;
+#justify-content: center; /* Space between cards */
+align-items: center;
+flex-direction: column;
+}
+
+.card3{
+  width:400px;
+  padding:30px;
+  #text-align:center;
+  border: 2px solid #ddd;
+  margin : 30px;
+  background-color: white;        /* Card background color */
+border-radius: 10px;            /* Rounded corners */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+border: 2px solid #ddd;        /* Light border */
+}
+
+.center-card2{
+display:flex;
+justify-content: center; /* Space between cards */
+align-items: center;
+text-align:center;
+margin:50px;
+padding:40px;       /* Light border */
+}
+

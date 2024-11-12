@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    {% block styles %}
+    <!-- Load Bootstrap-Flask CSS here -->
+    {{ bootstrap.load_css() }}
+
+    <!-- Link to the styles.css here to apply styling to all the child templates.-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inknut+Antiqua&family=Libre+Baskerville:ital@1&display=swap" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Inknut+Antiqua&family=Libre+Baskerville:ital@1&family=Original+Surfer&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+    {% endblock %}
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body>
+
+    {% block content %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="alert alert-{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+    <script>
+  window.onload = function() {
+    // Select all elements with the 'alert' class
+    var flashMessages = document.querySelectorAll('.alert');
+
+    // Check if there are any flash messages
+    if (flashMessages.length > 0) {
+      // Hide each message after 2 seconds
+      setTimeout(function() {
+        flashMessages.forEach(function(flashMessage) {
+          flashMessage.style.display = 'none';
+        });
+      }, 2000);  // Hide after 2 seconds
+    }
+  }
+</script>
+    {% endblock %}
+  </body>
+</html>

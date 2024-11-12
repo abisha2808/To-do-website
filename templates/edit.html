@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %} Register {% endblock %}
+{% block content %}
+<div class="content" >
+    <div class="header-container">
+        <div class="space-left_side">
+            <h1 class="font-bold" > Dashboard </h1></div>
+        <div class="right cursive">
+            <a>  welcome {{user_name}} </a>
+             <a href="{{url_for('home')}}">Home</a>
+            <a href="{{ url_for('logout') }}" >
+                <button  class="fancy-button"> Log out </button></a>
+
+        </div>
+    </div>
+        <div class="card-container">
+        <div class="cards-login">
+            <h3> Edit the Task </h3>
+             <form method="POST" action="{{ url_for('edit', task_id=task.id, user_name=user_name) }}">
+                {{render_form(form, novalidate=True)}}
+             </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

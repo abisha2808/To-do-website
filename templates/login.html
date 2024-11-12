@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% from 'bootstrap5/form.html' import render_form %}
+{% block title %} Log in{% endblock %}
+{% block content %}
+
+<div class="content" >
+    <div class="header-container">
+        <div class="space-left_side">
+            <h1 class="font-bold" > Task Management 📰</h1></div>
+        <div class="right cursive">
+             <a href="{{url_for('home')}}">Home</a>
+             <a href="{{ url_for('register') }}">
+                <button  class="fancy-button"> Register </button></a>
+            <a href="{{ url_for('login') }}" >
+                <button class="fancy-button"> Log in </button></a>
+        </div>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="alert alert-{{ category}}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+    <script>
+  window.onload = function() {
+    // Select all elements with the 'alert' class
+    var flashMessages = document.querySelectorAll('.alert');
+
+    // Check if there are any flash messages
+    if (flashMessages.length > 0) {
+      // Hide each message after 2 seconds
+      setTimeout(function() {
+        flashMessages.forEach(function(flashMessage) {
+          flashMessage.style.display = 'none';
+        });
+      }, 5000);  // Hide after 5 seconds
+    }
+  }
+</script>
+    <div class="card-container">
+        <div class="cards-login">
+            <h3> Login into your account</h3>
+            <p> Enter the details</p>
+             <form method="POST" action="{{ url_for('login') }}">
+                {{render_form(form, novalidate=True)}}
+             </form>
+
+        </div>
+    </div>
+    <div >
+         <P class="center"> create a new account <a href="{{url_for('register')}}"> log in</a> </P>
+    </div>
+</div>
+{% endblock %}
